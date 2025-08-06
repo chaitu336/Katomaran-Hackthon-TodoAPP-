@@ -1,7 +1,17 @@
-# Welcome to your Expo app 👋
+✅ Todo Task Management App
+A simple and intuitive task management mobile app built using React Native with Expo Router. This app allows users to log in, manage their daily tasks, and view their profile.
+📱 Features
+🔐 Login Screen with dummy credentials
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+📋 Task List View – add and view tasks
 
+👤 User Profile screen
+
+🧭 Bottom Tab Navigation using expo-router
+
+💡 Clean UI with themed components
+
+✅ Easy-to-understand code structure
 ## Get started
 
 1. Install dependencies
