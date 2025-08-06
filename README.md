@@ -45,16 +45,41 @@ npm run reset-project
 
 This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
 
-## Learn more
+# ✅ Todo Task Management App
 
-To learn more about developing your project with Expo, look at the following resources:
+A cross-platform mobile app built with **React Native + Expo Router** for managing personal tasks. Users can log in, create, update, delete, and organize their to-dos easily.
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+![Architecture Diagram]
 
-## Join the community
+---
 
-Join our community of developers creating universal apps.
+## 🎯 Objective
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+This app was built as part of a 48-hour hackathon to:
+
+- Provide social login access (custom dummy login implemented)
+- Allow users to manage tasks (CRUD operations)
+- Maintain a clean and responsive UI for both Android and iOS
+- Handle offline storage using `AsyncStorage`
+
+---
+
+## ⚙️ Features
+
+- 🔐 **Login page** (with dummy auth: `admin` / `1234`)
+- 📝 **Add, View, Edit, Delete Tasks**
+- ⏰ Task fields: `Title`, `Description`, `Due Date`, `Priority`, `Status`
+- 🧭 **Tab Navigation** (Tasks, Profile)
+- 💾 Offline storage with `AsyncStorage`
+- 💅 Clean UI using `react-native-paper`
+- 🔁 Pull-to-refresh + Swipe-to-delete support
+
+---
+
+## 📲 Login Credentials
+
+Use the following credentials to log in:
+
+```bash
+Username: admin
+Password: 1234
