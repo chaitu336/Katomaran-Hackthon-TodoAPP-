@@ -1,44 +1,40 @@
-import { Link, Stack } from 'expo-router';
-import { StyleSheet, View } from 'react-native';
-import { ThemedText } from '@/components/ThemedText';
-import { ThemedView } from '@/components/ThemedView';
+// File: app/tabs/_layout.js
+import { Tabs } from 'expo-router';
+import { MaterialIcons } from '@expo/vector-icons';
 
-export default function AppInfoScreen() {
+export default function TabLayout() {
   return (
-    <>
-      <Stack.Screen options={{ title: 'About This App' }} />
-      <ThemedView style={styles.container}>
-        <ThemedText type="title"> Task Management App</ThemedText>
-        <ThemedText style={styles.text}>
-          This app helps you stay organized and manage your daily tasks efficiently.
-        </ThemedText>
-        <ThemedText style={styles.text}>
-            Built with React Native + Expo Router
-        </ThemedText>
-        <ThemedText style={styles.text}>
-            Developed by: Manojkumar G
-        </ThemedText>
-        <ThemedText style={styles.text}>
-            Version: 1.0.0
-        </ThemedText>
+    <Tabs
+      screenOptions={({ route }) => ({
+        headerShown: true,
+        tabBarShowLabel: true,
+        tabBarIcon: ({ color, size }) => {
+          let iconName;
 
-        <Link href="/" style={styles.link}>
-          <ThemedText type="link">🔙 Back to Home</ThemedText>
-        </Link>
-      </ThemedView>
-    </>
+          switch (route.name) {
+            case 'index':
+              iconName = 'check-circle';
+              break;
+            case 'add-task':
+              iconName = 'add-circle-outline';
+              break;
+            case 'login':
+              iconName = 'login';
+              break;
+            case 'complete-tasks':
+              iconName = 'done-all';
+              break;
+            case 'explore':
+              iconName = 'explore';
+              break;
+            default:
+              iconName = 'error';
+              break;
+          }
+
+          return <MaterialIcons name={iconName} size={size} color={color} />;
+        },
+      })}
+    />
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1, alignItems: 'center', justifyContent: 'center', padding: 20,
-  },
-  text: {
-    fontSize: 16, textAlign: 'center', marginVertical: 6,
-  },
-  link: {
-    marginTop: 20,
-    paddingVertical: 15,
-  },
-});
